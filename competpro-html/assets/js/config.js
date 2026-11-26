@@ -1,0 +1,4 @@
+window.COMPETPRO_CONFIG = {
+  SUPABASE_URL: 'https://uvqmmtwvhfoensgqrtyf.supabase.co',
+  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV2cW1tdHd2aGZvZW5zZ3FydHlmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU2NzM2OTIsImV4cCI6MjExMTI0OTY5Mn0.hHw52MmMxx-FGaXofWF-E9sHAd94zUnbjcqIWkuHnrY'
+};

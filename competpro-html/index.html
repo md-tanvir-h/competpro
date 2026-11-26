@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompetPro — Rating barao, interview jitao</title>
+    <meta name="description" content="Codeforces/LeetCode training, DSA and ICPC preparation for university students. Rating barao, interview jitao." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="site-header sticky top-0 z-50 backdrop-blur border-b border-soft">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+        <a href="#" class="flex items-center gap-2 font-bold text-lg">
+          <img src="assets/img/logo.svg" alt="CompetPro logo" class="w-9 h-9" />
+          CompetPro
+        </a>
+        <div class="hidden md:flex items-center gap-7 text-sm font-medium site-nav-links">
+          <a href="#services" class="hover:text-primary transition-colors" data-i18n="navCourses">কোর্স</a>
+          <a href="#roadmap" class="hover:text-primary transition-colors" data-i18n="navRoadmap">রোডম্যাপ</a>
+          <a href="#results" class="hover:text-primary transition-colors" data-i18n="navResults">রেজাল্ট</a>
+          <a href="#blog" class="hover:text-primary transition-colors" data-i18n="navBlog">ব্লগ</a>
+          <a href="#pricing" class="hover:text-primary transition-colors" data-i18n="navPricing">প্রাইসিং</a>
+          <a href="#faq" class="hover:text-primary transition-colors" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1 rounded-xl border border-soft p-1" role="group" aria-label="Language switcher">
+            <button class="lang-btn active-lang px-2 py-1 rounded-lg text-xs font-bold transition-colors" data-lang="bn">বাংলা</button>
+            <button class="lang-btn px-2 py-1 rounded-lg text-xs font-bold transition-colors" data-lang="en">EN</button>
+          </div>
+          <div class="hidden sm:flex items-center gap-1 rounded-xl border border-soft p-1" role="group" aria-label="Theme switcher">
+            <button class="theme-btn w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors" data-theme="light" title="Light">A</button>
+            <button class="theme-btn w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors" data-theme="dark" title="Dark">◐</button>
+            <button class="theme-btn w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-colors" data-theme="warm" title="Warm">☀</button>
+          </div>
+          <a href="#contact" class="btn btn-primary !px-4 !py-2 text-sm" data-i18n="navCta">ফ্রি সেশন নাও</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-soft code-pattern">
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        <div class="fade-up">
+          <p class="text-primary font-semibold mb-3" data-i18n="heroEyebrow">কম্পিটিটিভ প্রোগ্রামিং কোচিং</p>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4" data-i18n="heroTitle">
+            Rating বাড়াও, Interview জেতো
+          </h1>
+          <p class="text-lg opacity-80 mb-8 leading-relaxed" data-i18n="heroIntro">
+            Codeforces ও LeetCode-এর স্ট্রাকচার্ড ট্রেনিং, গভীর DSA আর ICPC প্রস্তুতি — সবই বিশ্ববিদ্যালয়ের জুনিয়রদের জন্য সাজানো।
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="btn btn-primary" data-i18n="heroCta">ফ্রি সেশন নাও</a>
+            <a href="#pricing" class="btn btn-outline" data-i18n="heroSecondaryCta">প্রাইসিং দেখো</a>
+          </div>
+          <div class="flex gap-10 mt-10" id="counters">
+            <div>
+              <p class="text-3xl font-bold text-primary"><span class="counter" data-target="500">0</span>+</p>
+              <p class="text-sm opacity-70" data-i18n="counterStudents">স্টুডেন্ট</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-primary"><span class="counter" data-target="95">0</span>%</p>
+              <p class="text-sm opacity-70" data-i18n="counterResults">রেজাল্ট</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-primary"><span class="counter" data-target="40">0</span>+</p>
+              <p class="text-sm opacity-70" data-i18n="counterContests">কনটেস্ট</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up" style="animation-delay: 0.2s">
+          <div class="hero-terminal-wrap">
+            <div class="hero-terminal-card" role="img" aria-label="Student rating terminal">
+              <div class="terminal-topbar"><span></span></div>
+              <div class="terminal-content">
+                <p class="terminal-command">$ cf rating --student</p>
+                <div class="terminal-line"><span>start</span><strong>1050</strong><em>Newbie</em></div>
+                <div class="terminal-line"><span>now</span><strong class="terminal-green">1690</strong><em class="terminal-green">Expert</em></div>
+                <div class="terminal-line"><span>solved</span><strong>412 problems</strong></div>
+                <div class="terminal-line"><span>time</span><strong>6 months</strong></div>
+              </div>
+              <svg class="terminal-growth" viewBox="0 0 180 120" aria-hidden="true"><path d="M8 106c16-38 30-18 46-44s24-12 38-34 25-8 39-20 25-8 41-30" fill="none" stroke="#2EA043" stroke-width="4" stroke-linecap="round"/><path d="M8 106c16-38 30-18 46-44s24-12 38-34 25-8 39-20 25-8 41-30v128H8Z" fill="#2EA043" opacity=".12"/></svg>
+            </div>
+            <span class="terminal-badge">&lt;keep-coding /&gt;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust logos -->
+    <section class="border-b border-soft py-8" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="text-center text-sm uppercase tracking-widest opacity-60 mb-6" data-i18n="trustTitle">আমাদের স্টুডেন্টরা এসেছে এইসব জায়গা থেকে</p>
+        <div class="flex flex-wrap justify-center gap-10 opacity-60 font-bold text-lg">
+          <span>University of Chittagong</span>
+          <span>CUET</span>
+          <span>BUP</span>
+          <span>RUET</span>
+          <span>BUET</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadblocks -->
+    <section class="py-16 md:py-20 bg-soft code-pattern" id="roadblocks" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-2xl mb-10">
+          <p class="text-primary font-semibold mb-3" data-i18n="roadblocksEyebrow">প্রবলেম-সলভিংয়ে আটকে যাচ্ছ?</p>
+          <h2 class="section-title mb-4" data-i18n="roadblocksTitle">কোথা থেকে শুরু করবে বুঝতে পারছ না?</h2>
+          <p class="opacity-70" data-i18n="roadblocksIntro">তোমার সমস্যাকে একটা পরিষ্কার প্র্যাকটিস প্ল্যানে বদলে দিই।</p>
+        </div>
+        <div class="roadblock-table border-y border-soft">
+          <div class="roadblock-row grid md:grid-cols-2 gap-4 py-6 border-b border-soft">
+            <p class="opacity-65" data-i18n="problemOne">কোথা থেকে শুরু করব বুঝতে পারছি না।</p>
+            <p class="font-medium" data-i18n="solutionOne">Beginner থেকে Expert পর্যন্ত rating-based roadmap।</p>
+          </div>
+          <div class="roadblock-row grid md:grid-cols-2 gap-4 py-6 border-b border-soft">
+            <p class="opacity-65" data-i18n="problemTwo">Contest-এ সময় ফুরিয়ে যায়, মূল আইডিয়া মিস করি।</p>
+            <p class="font-medium" data-i18n="solutionTwo">Weekly mock contest, তারপর mentor-এর সাথে upsolve review।</p>
+          </div>
+          <div class="roadblock-row grid md:grid-cols-2 gap-4 py-6">
+            <p class="opacity-65" data-i18n="problemThree">Interview-এর DSA প্রশ্নে মাথা ফাঁকা হয়ে যায়।</p>
+            <p class="font-medium" data-i18n="solutionThree">LeetCode pattern practice আর mock interview।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you get -->
+    <section class="py-16 md:py-20" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="text-primary font-semibold mb-3" data-i18n="benefitsEyebrow">প্রোগ্রামে যা পাবে</p>
+          <h2 class="section-title mb-6" data-i18n="benefitsTitle">What you get</h2>
+          <ul class="space-y-5 text-lg">
+            <li class="flex gap-3 items-start"><span class="check-mark">✓</span><span data-i18n="benefitOne">Arrays থেকে Graphs আর DP পর্যন্ত DSA</span></li>
+            <li class="flex gap-3 items-start"><span class="check-mark">✓</span><span data-i18n="benefitTwo">তোমার লেভেল অনুযায়ী Codeforces ও LeetCode problem set</span></li>
+            <li class="flex gap-3 items-start"><span class="check-mark">✓</span><span data-i18n="benefitThree">ICPC team preparation এবং mock contest</span></li>
+            <li class="flex gap-3 items-start"><span class="check-mark">✓</span><span data-i18n="benefitFour">Mentor-এর সাথে weekly contest review</span></li>
+            <li class="flex gap-3 items-start"><span class="check-mark">✓</span><span data-i18n="benefitFive">Private doubt-solving group</span></li>
+          </ul>
+        </div>
+        <div class="card schedule-card">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <h3 class="text-2xl font-bold" data-i18n="scheduleTitle">Contest schedule</h3>
+              <p class="opacity-60 mt-1" data-i18n="scheduleIntro">তোমার batch অনুযায়ী routine বদলাবে।</p>
+            </div>
+            <svg class="schedule-icon text-primary" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="33" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 5v8M34 5v8M6 19h36M14 27h.01M24 27h.01M34 27h.01M14 35h.01M24 35h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <div class="schedule-row"><span>Sat</span><strong data-i18n="scheduleSat">Live class: এই সপ্তাহের DSA topic</strong></div>
+          <div class="schedule-row"><span>Sun</span><strong data-i18n="scheduleSun">LeetCode weekly contest ও review</strong></div>
+          <div class="schedule-row"><span>Tue</span><strong data-i18n="scheduleTue">Problem-solving session</strong></div>
+          <div class="schedule-row"><span>Fri</span><strong data-i18n="scheduleFri">Codeforces round upsolve</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem/Benefit -->
+    <section class="py-16 md:py-20" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="section-title mb-4" data-i18n="problemTitle">সমস্যাটা কী?</h2>
+        <p class="max-w-2xl mx-auto opacity-75 mb-12" data-i18n="problemIntro">
+          মোবাইলে টিউটোরিয়াল দেখা, র‍্যান্ডম সলভিং আর প্রশ্নের উত্তর জানার ধৈর্য — এই লুপে প্রতি সেমিস্টার হাজার হাজার জুনিয়র আটকে যায়। CompetPro একটা স্ট্রাকচার্ড পথ দেয়।
+        </p>
+        <div class="grid md:grid-cols-3 gap-6" id="services">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center mb-4 font-bold text-xl">01</div>
+            <h3 class="text-xl font-semibold mb-2" data-i18n="serviceOneTitle">Codeforces ট্রেনিং</h3>
+            <p class="opacity-70 leading-relaxed" data-i18n="serviceOneText">রেটেড কনটেস্ট স্ট্র্যাটেজি, আপসলভ আর ভার্ডিক্ট বিশ্লেষণ — প্রতি সপ্তাহে নতুন কনটেস্ট প্র্যাকটিস।</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center mb-4 font-bold text-xl">02</div>
+            <h3 class="text-xl font-semibold mb-2" data-i18n="serviceTwoTitle">DSA মাস্টারি</h3>
+            <p class="opacity-70 leading-relaxed" data-i18n="serviceTwoText">প্রতিটা টপিক — গ্রাফ, DP, ডেটা স্ট্রাকচার — স্টেপ বাই স্টেপ, হাতে-কলমে প্রবলেম সেট সহ।</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center mb-4 font-bold text-xl">03</div>
+            <h3 class="text-xl font-semibold mb-2" data-i18n="serviceThreeTitle">ICPC প্রস্তুতি</h3>
+            <p class="opacity-70 leading-relaxed" data-i18n="serviceThreeText">টিম ভিত্তিক প্র্যাকটিস, রিজিওনাল কনটেস্ট সিমুলেশন, আর কোচের গাইডলাইন — ভারত-অঞ্চলের টপ টিমের মতো।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 md:py-20 bg-soft" id="how" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="section-title text-center mb-12" data-i18n="howTitle">কীভাবে কাজ করে</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-14 h-14 rounded-full bg-accent mx-auto mb-4 flex items-center justify-center font-bold text-xl">১</div>
+            <h3 class="font-semibold text-lg mb-2" data-i18n="howOneTitle">ফ্রি সেশনে জয়েন করো</h3>
+            <p class="opacity-70 text-sm leading-relaxed" data-i18n="howOneText">৩০ মিনিটের প্রবলম-সলভিং সেশন — তোমার বর্তমান লেভেল যাচাই হবে।</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-14 h-14 rounded-full bg-accent mx-auto mb-4 flex items-center justify-center font-bold text-xl">২</div>
+            <h3 class="font-semibold text-lg mb-2" data-i18n="howTwoTitle">পার্সোনাল রোডম্যাপ পাও</h3>
+            <p class="opacity-70 text-sm leading-relaxed" data-i18n="howTwoText">তোমার রেটিং, লক্ষ্য আর টাইম অনুযায়ী কোচ রোডম্যাপ বানিয়ে দেবে।</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-14 h-14 rounded-full bg-accent mx-auto mb-4 flex items-center justify-center font-bold text-xl">৩</div>
+            <h3 class="font-semibold text-lg mb-2" data-i18n="howThreeTitle">সপ্তাহে রেটিং বাড়াও</h3>
+            <p class="opacity-70 text-sm leading-relaxed" data-i18n="howThreeText">কনটেস্ট + প্রবলেম + রিভিউ লুপ ফলো করে নিয়মিত রেটিং বাড়ে।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Six month roadmap -->
+    <section class="py-16 md:py-20 code-pattern" id="roadmap" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-primary font-semibold mb-3" data-i18n="roadmapEyebrow">৬ মাসের practice training</p>
+          <h2 class="section-title mb-4" data-i18n="roadmapTitle">শূন্য থেকে contest-ready হওয়ার roadmap</h2>
+          <p class="opacity-70" data-i18n="roadmapIntro">প্রতিদিন কী করবে, কোন topic কখন শেষ করবে, আর কীভাবে নিজের ভুল থেকে শিখবে — সব ধাপে ধাপে।</p>
+        </div>
+        <div class="grid lg:grid-cols-5 gap-8 items-center">
+          <div class="lg:col-span-2">
+            <img src="assets/img/roadmap.svg" alt="Six month competitive programming roadmap" class="w-full rounded-2xl shadow-lift" />
+          </div>
+          <div class="lg:col-span-3 grid sm:grid-cols-2 gap-4">
+            <div class="roadmap-step"><span class="roadmap-number">01</span><div><h3 data-i18n="monthOneTitle">মাস ১ · Foundation</h3><p data-i18n="monthOneText">C++ basics, complexity, arrays, strings এবং প্রতিদিন ২টি easy problem।</p></div></div>
+            <div class="roadmap-step"><span class="roadmap-number">02</span><div><h3 data-i18n="monthTwoTitle">মাস ২ · Core DSA</h3><p data-i18n="monthTwoText">Sorting, binary search, recursion, stack, queue ও linked list।</p></div></div>
+            <div class="roadmap-step"><span class="roadmap-number">03</span><div><h3 data-i18n="monthThreeTitle">মাস ৩ · Patterns</h3><p data-i18n="monthThreeText">Two pointers, sliding window, greedy, trees এবং problem patterns।</p></div></div>
+            <div class="roadmap-step"><span class="roadmap-number">04</span><div><h3 data-i18n="monthFourTitle">মাস ৪ · Advanced</h3><p data-i18n="monthFourText">Graphs, DP, bit manipulation এবং timed Codeforces rounds।</p></div></div>
+            <div class="roadmap-step"><span class="roadmap-number">05</span><div><h3 data-i18n="monthFiveTitle">মাস ৫ · Contest mode</h3><p data-i18n="monthFiveText">Weekly mock contest, upsolve notebook এবং mentor review।</p></div></div>
+            <div class="roadmap-step"><span class="roadmap-number highlight">06</span><div><h3 data-i18n="monthSixTitle">মাস ৬ · Interview + ICPC</h3><p data-i18n="monthSixText">Mock interview, team contest, portfolio problems এবং final rating push।</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results / Testimonials -->
+    <section class="py-16 md:py-20" id="results">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="section-title text-center mb-12" data-aos="fade-up" data-i18n="resultsTitle">স্টুডেন্টদের রেজাল্ট</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/student-1.svg" alt="শাকিব রায়হান" class="w-20 h-20 rounded-full mx-auto mb-4" />
+            <p class="font-semibold" data-i18n="studentOneName">শাকিব রায়হান</p>
+            <p class="text-sm opacity-60 mb-3" data-i18n="studentOneBatch">ব্যাচ ২০২৪ · CSE, CU</p>
+            <img src="assets/img/rating-chart.svg" alt="শাকিবের রেটিং গ্রাফ" class="rounded-lg w-full mb-3" />
+            <p class="text-sm text-primary font-medium" data-i18n="studentOneResult">৬ মাসে ১২৪৭ → ১৮৫০</p>
+          </div>
+          <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/student-2.svg" alt="সাদিয়া রহমান" class="w-20 h-20 rounded-full mx-auto mb-4" />
+            <p class="font-semibold" data-i18n="studentTwoName">সাদিয়া রহমান</p>
+            <p class="text-sm opacity-60 mb-3" data-i18n="studentTwoBatch">ব্যাচ ২০২৩ · CSE, CUET</p>
+            <img src="assets/img/rating-chart.svg" alt="সাদিয়ার রেটিং গ্রাফ" class="rounded-lg w-full mb-3" />
+            <p class="text-sm text-primary font-medium" data-i18n="studentTwoResult">Pupil → Specialist মাত্র ৫ মাসে</p>
+          </div>
+          <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img/student-3.svg" alt="মোস্তাফিজ আহমেদ" class="w-20 h-20 rounded-full mx-auto mb-4" />
+            <p class="font-semibold" data-i18n="studentThreeName">মোস্তাফিজ আহমেদ</p>
+            <p class="text-sm opacity-60 mb-3" data-i18n="studentThreeBatch">ব্যাচ ২০২৩ · ICE, BUP</p>
+            <img src="assets/img/rating-chart.svg" alt="মোস্তাফিজের রেটিং গ্রাফ" class="rounded-lg w-full mb-3" />
+            <p class="text-sm text-primary font-medium" data-i18n="studentThreeResult">ICPC রিজিওনালস-এ টিম কোয়ালিফাই</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coding blog -->
+    <section class="py-16 md:py-20 bg-soft code-pattern" id="blog" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
+          <div>
+            <p class="text-primary font-semibold mb-3" data-i18n="blogEyebrow">শিখতে থাকো</p>
+            <h2 class="section-title" data-i18n="blogTitle">From the blog</h2>
+          </div>
+          <p class="max-w-sm opacity-70" data-i18n="blogIntro">Problem-solving mindset, contest strategy আর interview preparation নিয়ে ছোট ছোট practical guide।</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-visual blog-visual-search">
+              <svg viewBox="0 0 320 150" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="20" y="36" width="34" height="34" rx="5"/><rect x="60" y="36" width="34" height="34" rx="5"/><rect x="100" y="36" width="34" height="34" rx="5"/><rect x="140" y="36" width="34" height="34" rx="5" class="active-box"/><rect x="180" y="36" width="34" height="34" rx="5"/><rect x="220" y="36" width="34" height="34" rx="5"/><rect x="260" y="36" width="34" height="34" rx="5"/></g><g fill="currentColor" font-family="monospace" font-size="11" text-anchor="middle"><text x="37" y="58">1</text><text x="77" y="58">3</text><text x="117" y="58">5</text><text x="157" y="58">7</text><text x="197" y="58">9</text><text x="237" y="58">11</text><text x="277" y="58">13</text><text x="37" y="98">lo</text><text x="157" y="98">mid</text><text x="277" y="98">hi</text></g></svg>
+            </div>
+            <div class="blog-card-body">
+              <div class="flex items-center justify-between gap-3 mb-4"><span class="blog-tag" data-i18n="blogCategoryAlgorithms">Algorithms</span><span class="blog-time" data-i18n="blogTimeOne">5 min read</span></div>
+              <h3 class="text-xl font-bold mb-3" data-i18n="blogOneTitle">Binary search without off-by-one bugs</h3>
+              <p class="opacity-70 leading-relaxed" data-i18n="blogOneText">One template that works for lower bound, upper bound, and answer search.</p>
+              <a href="#contact" class="inline-flex text-primary font-semibold mt-5" data-i18n="readArticle">আরও পড়ো →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-visual blog-visual-terminal">
+              <svg viewBox="0 0 320 150" aria-hidden="true"><rect x="105" y="15" width="110" height="120" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M120 42h48M120 58h68M120 74h40M120 90h60M120 106h30" stroke="currentColor" stroke-width="5" stroke-linecap="round" opacity=".8"/><path d="M120 58h68M120 90h60" stroke="#2EA043" stroke-width="5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="blog-card-body">
+              <div class="flex items-center justify-between gap-3 mb-4"><span class="blog-tag" data-i18n="blogCategoryContests">Contests</span><span class="blog-time" data-i18n="blogTimeTwo">4 min read</span></div>
+              <h3 class="text-xl font-bold mb-3" data-i18n="blogTwoTitle">How to read a Codeforces problem in 2 minutes</h3>
+              <p class="opacity-70 leading-relaxed" data-i18n="blogTwoText">Spot constraints, hidden hints, and the intended complexity before you write code.</p>
+              <a href="#contact" class="inline-flex text-primary font-semibold mt-5" data-i18n="readArticle">আরও পড়ো →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-visual blog-visual-dp">
+              <svg viewBox="0 0 320 150" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="34" y="20" width="34" height="25" rx="4"/><rect x="74" y="20" width="34" height="25" rx="4"/><rect x="114" y="20" width="34" height="25" rx="4"/><rect x="154" y="20" width="34" height="25" rx="4"/><rect x="194" y="20" width="34" height="25" rx="4"/><rect x="234" y="20" width="34" height="25" rx="4"/><rect x="34" y="53" width="34" height="25" rx="4"/><rect x="74" y="53" width="34" height="25" rx="4"/><rect x="114" y="53" width="34" height="25" rx="4"/><rect x="154" y="53" width="34" height="25" rx="4"/><rect x="194" y="53" width="34" height="25" rx="4"/><rect x="234" y="53" width="34" height="25" rx="4"/><rect x="34" y="86" width="34" height="25" rx="4"/><rect x="74" y="86" width="34" height="25" rx="4"/><rect x="114" y="86" width="34" height="25" rx="4"/><rect x="154" y="86" width="34" height="25" rx="4"/><rect x="194" y="86" width="34" height="25" rx="4"/><rect x="234" y="86" width="34" height="25" rx="4"/></g><path d="M50 100 91 67l40 33 40-36 40 27" fill="none" stroke="#2EA043" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="blog-card-body">
+              <div class="flex items-center justify-between gap-3 mb-4"><span class="blog-tag" data-i18n="blogCategoryDsa">DSA</span><span class="blog-time" data-i18n="blogTimeThree">7 min read</span></div>
+              <h3 class="text-xl font-bold mb-3" data-i18n="blogThreeTitle">Dynamic programming: from recursion to a table</h3>
+              <p class="opacity-70 leading-relaxed" data-i18n="blogThreeText">Turn a slow recursive solution into a memoized and bottom-up one, step by step.</p>
+              <a href="#contact" class="inline-flex text-primary font-semibold mt-5" data-i18n="readArticle">আরও পড়ো →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 md:py-20 bg-soft" id="pricing" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="section-title mb-4" data-i18n="pricingTitle">সিম্পল প্রাইসিং</h2>
+        <p class="opacity-70 mb-10" data-i18n="pricingIntro">কোনো লুকানো চার্জ নেই। যেকোনো সময় ক্লাস বন্ধ করতে পারবেন।</p>
+        <div class="card max-w-sm mx-auto">
+          <p class="text-sm uppercase tracking-widest opacity-60 mb-4" data-i18n="monthlyPlan">মাসিক প্ল্যান</p>
+          <p class="text-5xl font-bold mb-2" data-i18n="priceAmount">৳৪,০০০</p>
+          <p class="opacity-60 mb-6" data-i18n="perMonth">প্রতি মাসে</p>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span> <span data-i18n="priceOne">সপ্তাহে ৩টা লাইভ ক্লাস</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span> <span data-i18n="priceTwo">পার্সোনাল রোডম্যাপ ও রিভিউ</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span> <span data-i18n="priceThree">প্রাইভেট গ্রুপে কনটেস্ট আলোচনা</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span> <span data-i18n="priceFour">ICPC টিম গাইডলাইন</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-full" data-i18n="pricingCta">ফ্রি সেশন নাও</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-20" id="faq">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="section-title text-center mb-12" data-aos="fade-up" data-i18n="faqTitle">সাধারণ প্রশ্ন</h2>
+        <div class="space-y-4" data-aos="fade-up">
+          <details class="card">
+            <summary class="font-semibold cursor-pointer" data-i18n="faqOneQuestion">আমার রেটিং এখনো ১২০০-ও না — ঢুকতে পারব?</summary>
+            <p class="opacity-70 mt-3 leading-relaxed" data-i18n="faqOneAnswer">একদম পারবেন। জিরো থেকে শুরু করা স্টুডেন্টদের জন্য আলাদা ফাউন্ডেশন ট্র্যাক আছে।</p>
+          </details>
+          <details class="card">
+            <summary class="font-semibold cursor-pointer" data-i18n="faqTwoQuestion">ক্লাসগুলো কি রেকর্ড করা থাকে?</summary>
+            <p class="opacity-70 mt-3 leading-relaxed" data-i18n="faqTwoAnswer">হ্যাঁ, প্রতিটা লাইভ ক্লাস রেকর্ড করে পরে দেখার সুবিধা আছে।</p>
+          </details>
+          <details class="card">
+            <summary class="font-semibold cursor-pointer" data-i18n="faqThreeQuestion">কোন ভাষায় ক্লাস হয়?</summary>
+            <p class="opacity-70 mt-3 leading-relaxed" data-i18n="faqThreeAnswer">ক্লাস হয় বাংলায়, কোড আর টার্মগুলো ইংরেজিতে — ইন্টারভিউ-ফ্রেন্ডলি ভাবে।</p>
+          </details>
+          <details class="card">
+            <summary class="font-semibold cursor-pointer" data-i18n="faqFourQuestion">মাস শেষে না পছন্দ হলে?</summary>
+            <p class="opacity-70 mt-3 leading-relaxed" data-i18n="faqFourAnswer">যেকোনো সময় বন্ধ করতে পারবেন, অতিরিক্ত টাকা ফেরত পাবেন।</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA / Contact form -->
+    <section class="py-16 md:py-20 bg-soft" id="contact" data-aos="fade-up">
+      <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="section-title mb-4" data-i18n="contactTitle">ফ্রি প্রবলম-সলভিং সেশন নাও</h2>
+          <p class="opacity-75 mb-6 leading-relaxed" data-i18n="contactIntro">
+            ৩০ মিনিটের একটা ফ্রি সেশনে তোমার বর্তমান লেভেল যাচাই হবে আর পার্সোনাল রোডম্যাপ পাবে — কোনো অগ্রিম নেই।
+          </p>
+          <div class="space-y-3 text-sm">
+            <p class="flex items-center gap-2"><span class="text-primary font-bold">☎</span> <a href="tel:+8801712131415" class="hover:text-primary">+৮৮০ ১৭১২-১৩১৪১৫</a></p>
+            <p class="flex items-center gap-2"><span class="text-primary font-bold">✉</span> <a href="mailto:hello@cpcsupport.com" class="hover:text-primary">hello@cpcsupport.com</a></p>
+            <p class="flex items-center gap-2"><span class="text-primary font-bold">📍</span> <span data-i18n="contactAddress">কোতোয়ালী, চট্টগ্রাম</span></p>
+          </div>
+          <iframe
+            title="Kotowali, Chattogram map"
+            src="https://www.google.com/maps?q=Kotwali,+Chattogram&output=embed"
+            class="w-full h-48 rounded-xl mt-6 border-0"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <form id="lead-form" class="card space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1" data-i18n="formName">নাম</label>
+            <input id="name" name="name" type="text" required class="w-full rounded-xl border border-soft bg-transparent px-4 py-2.5" placeholder="তোমার নাম" data-i18n-placeholder="formNamePlaceholder" />
+          </div>
+          <div>
+            <label for="contact" class="block text-sm font-medium mb-1" data-i18n="formContact">ফোন / ইমেইল / WhatsApp</label>
+            <input id="contact" name="contact" type="text" required class="w-full rounded-xl border border-soft bg-transparent px-4 py-2.5" placeholder="যোগাযোগের মাধ্যম" data-i18n-placeholder="formContactPlaceholder" />
+          </div>
+          <div>
+            <label for="handle" class="block text-sm font-medium mb-1" data-i18n="formHandle">Codeforces / LeetCode হ্যান্ডেল (ঐচ্ছিক)</label>
+            <input id="handle" name="handle" type="text" class="w-full rounded-xl border border-soft bg-transparent px-4 py-2.5" placeholder="যেমন: tourist" data-i18n-placeholder="formHandlePlaceholder" />
+          </div>
+          <div>
+            <label for="goal" class="block text-sm font-medium mb-1" data-i18n="formGoal">লক্ষ্য (ঐচ্ছিক)</label>
+            <textarea id="goal" name="goal" rows="3" class="w-full rounded-xl border border-soft bg-transparent px-4 py-2.5" placeholder="যেমন: ৬ মাসে Expert হতে চাই" data-i18n-placeholder="formGoalPlaceholder"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full" data-i18n="formSubmit">সেশন বুক করো</button>
+          <p id="form-status" class="text-sm" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-soft py-10">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+        <a href="#" class="flex items-center gap-2 font-bold">
+          <img src="assets/img/logo.svg" alt="CompetPro logo" class="w-7 h-7" />
+          CompetPro
+        </a>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="#services" class="hover:text-primary" data-i18n="navCourses">কোর্স</a>
+          <a href="#roadmap" class="hover:text-primary" data-i18n="navRoadmap">রোডম্যাপ</a>
+          <a href="#blog" class="hover:text-primary" data-i18n="navBlog">ব্লগ</a>
+          <a href="#pricing" class="hover:text-primary" data-i18n="navPricing">প্রাইসিং</a>
+          <a href="#faq" class="hover:text-primary" data-i18n="navFaq">FAQ</a>
+          <a href="mailto:hello@cpcsupport.com" class="hover:text-primary" data-i18n="footerEmail">ইমেইল</a>
+          <a href="https://wa.me/8801712131415" target="_blank" rel="noopener" class="hover:text-primary">WhatsApp</a>
+        </div>
+        <p class="opacity-60" data-i18n="footerCopyright">© ২০২৬ CompetPro · কোতোয়ালী, চট্টগ্রাম</p>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a
+      href="https://wa.me/8801712131415?text=আসসালামু%20আলাইকুম,%20আমি%20CompetPro%20সম্পর্কে%20জানতে%20চাই"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp-এ মেসেজ করুন"
+      class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lift transition-transform hover:scale-110"
+    >
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.13-.42-2.15-1.34-.8-.71-1.34-1.6-1.5-1.9-.15-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zM20.5 3.5A11.86 11.86 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.44-8.4z"/></svg>
+    </a>
+
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/supabase.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
